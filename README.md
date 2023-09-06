@@ -659,7 +659,7 @@ Here is my config:
 
 **NOTE:** Proxmox uses a Corosync cluster engine, which uses a quorum-based voting technique to ensure consistent configuration among all the nodes of a cluster. The cluster configuration is distributed to all nodes with the help of a Proxmox cluster file system (pmxcfs).
 
-Click on create cluster, select the both vSwitches as link 0 and link 1.
+Open the Controlplane UI (https://138.201.31.244:8006) and click on create cluster, select the both vSwitches as link 0 and link 1.
 
 <img src="img/hetzner/create-cluster-0.png" alt="Alt-Text" title="" />
 
@@ -705,9 +705,9 @@ Now we are going, to create the VMs. First we need to upload the images.
 
 <img src="img/pfsense/pfsense-5.png" alt="Alt-Text" title="" />
 
-<img src="img/pfsense/pfsense-6.png" alt="Alt-Text" title="" />
+Now start the pfsense (VM) and install with default settings. After the successful installation you should get an output like:
 
-Now start the pfsense (VM) and install with default settings
+<img src="img/pfsense/pfsense-6.png" alt="Alt-Text" title="" />
 
 ## 6. Create VM and install fedora (workstation) on Worker-0
 
@@ -748,7 +748,7 @@ You can now also make ping test to the fedora vm running on worker-0 node like:
 
 ## 8. Config pfsense over UI
 
-Open on every vm http:192.168.1.1 like:
+Open on every vm https://192.168.1.1 like:
 
 <img src="img/pfsense/pfsense-7.png" alt="Alt-Text" title="" />
 
